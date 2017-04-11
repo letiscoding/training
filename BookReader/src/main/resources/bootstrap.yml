@@ -1,7 +1,6 @@
 spring:
-#  profiles: dev
   application:
     name: bookreader
-    cloud:
-        config:
-          uri: http://localhost:8001
+  cloud:
+    config:
+      uri: http://localhost:8001

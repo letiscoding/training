@@ -5,6 +5,7 @@ spring:
 spring:
   profiles: test
 my-name: test-reading book!
+---
 spring:
   profiles: dev
 my-name: dev-reading book!
