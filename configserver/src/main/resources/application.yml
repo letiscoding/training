@@ -11,9 +11,13 @@ server:
 #      defaultZone: http://discovery:8761/eureka/
 
 spring:
+#  profiles:
+#    active: native
   cloud:
     config:
       server:
+#        native:
+#          searchLocations:file: E:\03study\shu\code\training\configrepository
         git:
-          uri: https://github.com/huihuang2014/spring-cloud-sample-1
-          search-paths: service-config
+          uri: https://github.com/letiscoding/training.git
+          search-paths: configrepository
