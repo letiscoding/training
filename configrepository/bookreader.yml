@@ -4,8 +4,8 @@ spring:
 ---
 spring:
   profiles: test
-myname: test-reading book!
+  myname: test-reading book!
 ---
 spring:
   profiles: dev
-myname: dev-reading book!
+  myname: dev-reading book!
