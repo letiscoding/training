@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head lang="en">
+
+    <title>欢迎进入小说下载页面</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <h3>设置来源站点</h3>
+    <div class="form-group">
+        <button id="btnAdd" type="button col-sm-2" class="btn" >新增</button>
+        <button id="btnSave" type="button col-sm-10" class="btn" >保存</button>
+
+    </div>
+    <table id="dataTable" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>websitName</th>
+                <th>sourceUrl</th>
+                <th>channelUrlRegex</th>
+                <th>contentRegx</th>
+                <th>contentTitleRegx</th>
+                <!--<th>startTitle</th>-->
+                <th>delete</th>
+            </tr>
+         </thead>
+         <tbody>
+             <tr th:each="bookArg : ${bookArgs}">
+                <td ><input type="text" th:value="${bookArg.websitName}" /></td>
+                <td><input type="text" th:value="${bookArg.sourceUrl}" /></td>
+                <td ><input type="text" th:value="${bookArg.channelUrlRegex}" /></td>
+                <td ><input type="text" th:value="${bookArg.contentRegx}" /></td>
+                <td ><input type="text" th:value="${bookArg.contentTitleRegx}" /></td>
+                <!--<td ><input type="text" th:value="${bookArg.startTitle}" /></td>-->
+                <td><input type="button" class="btn" onclick="" value="delete" /></td>
+            </tr>
+             <tr >
+                 <td ><input type="text"  /></td>
+                 <td><input type="text"  /></td>
+                 <td ><input type="text"  /></td>
+                 <td ><input type="text"  /></td>
+                 <td ><input type="text"  /></td>
+                 <!--<td ><input type="text" th:value="${bookArg.startTitle}" /></td>-->
+                 <td><input type="button" class="btn" onclick="" value="delete" /></td>
+             </tr>
+         </tbody>
+
+    </table>
+</div>
+</body>
+<script th:src="@{/js/setting.js}"></script>
+</html>

@@ -1,6 +1,6 @@
 spring:
-  application:
-    name: bookreader
+  profiles:
+    active: test
   cloud:
     config:
       uri: http://localhost:8001

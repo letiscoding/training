@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>欢迎进入小说下载页面</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">书名:</label>
+            <div class="col-sm-8">
+                <input id="bookNameInput" type="text" class="form-control" />
+
+            </div>
+            <div class="col-sm-2">
+                <button id="search-button" type="button" class="btn">搜索</button>
+            </div>
+
+        </div>
+        <div class="row">
+            <table id="booksTable" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Simi</th>
+                    <th>From</th>
+                    <th>Time</th>
+                    <th>Url</th>
+                    <th>Digest</th>
+                    <th>down</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+
+        </div>
+    </div>
+</div>
+</body>
+<script th:src="@{/js/seach.js}"></script>
+</html>
