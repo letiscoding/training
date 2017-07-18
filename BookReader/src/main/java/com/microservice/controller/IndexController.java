@@ -23,17 +23,18 @@ public class IndexController {
 
     @RequestMapping("/")
     public String index(){
+
         return "index";
     }
 
-    @Value("${myname}")
-    String myname="lihui";
+//    @Value("${myname}")
+//    String myname="lihui";
 
-    @RequestMapping("/myname")
-    @ResponseBody
-    public String myname() {
-        return "My name  is: " + myname;
-    }
+//    @RequestMapping("/myname")
+//    @ResponseBody
+//    public String myname() {
+//        return "My name  is: " + myname;
+//    }
 
     @RequestMapping("/client")
     @ResponseBody

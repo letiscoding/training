@@ -9,6 +9,10 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>configserver</module>
+		<module>discoverserver</module>
+		<module>BookReader</module>
+		<module>apigateway</module>
+		<module>bookreader.UI</module>
 	</modules>
 	<name>training</name>
 	<description>Journey to Spring cloud</description>

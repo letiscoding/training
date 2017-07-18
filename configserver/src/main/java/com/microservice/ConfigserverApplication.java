@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @EnableConfigServer
-//@EnableDiscoveryClient
+@EnableDiscoveryClient
 @SpringBootApplication
 @RestController
 public class ConfigserverApplication {

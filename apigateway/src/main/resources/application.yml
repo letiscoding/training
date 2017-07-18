@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: apigateway
+server:
+  port: 8002
+
+zuul:
+  routes:
+    bookereader:
+      path: /bookreader/**
+      serviceId: bookreader
+      stripPrefix: true
+#      url: http://lihui-pc:8081/bookreader/
+  prefix: /api
+ribbon:
+  eureka:
+    enabled: false
+bookreader:
+  ribbon:
+    listOfServers: http://lihui-pc:8081/,http://lihui-pc:8082/
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+#security:
+#  user:
+#    name: lihui
+#    password: lihui
+#  basic:
+#    enabled: true

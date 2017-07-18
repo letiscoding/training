@@ -16,8 +16,19 @@ spring:
   cloud:
     config:
       server:
-#        native:
+        native:
 #          searchLocations:file: E:\03study\shu\code\training\configrepository
         git:
-          uri: https://github.com/letiscoding/training.git
+          uri: http://10.100.13.22:8080/tfs/Omnimedia/_git/NewMediaProject
           search-paths: configrepository
+          username: lihui
+          password: pdmi1234
+#           uri:file: ///C:\Users\lihui\spring-boot-microservice-config
+        health:
+          repositories:
+            bookreader:
+              profiles: test
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
